@@ -1,24 +1,21 @@
-## Questions
+## Text-2-SQL Benchmark
+Don't want to waste time figuring out whether some LLM can work for you? This app solves it.
 
-- Existing Benchmark Questions - What are they
-- Our own Categories of questions (see below)
-    - Which Hypothesis are we testing under each?
+### Why?
+Shortcomings of current benchmarks (BIRD, Spider, WikiSQL, SParC, etc...):
 
-## Dataset Generation
+Absent from these are "complicated" queries - for example, queries containing window functions, CTEs, pre-aggregations, among others.
+The Natural Language prompts typically used are not very complicated, industry-specific, or realistic.
+None measure how well a generative model performs on a messy and unorganized database, with duplicate tables, unclear column names, and bad data
 
-- How do we generate the datasets?
-    - Dynamically?
-    - OR based on our pre-defined questions
-- Is the approach Robust? Are the JOINs going to work? Do the values make sense (math-wise)
+## Methodology:
+This SQL Benchmark consists of ~200 Question/Query samples run against a database which tracks the use and creation of coupons across events, newsletters and stores. The SQL queries were designed to test window functions, CTEs, pre-aggregations, REGEX, multiple joins, NULL value handling and JSON-formatting, among others. We use our own custom version of Execution Accuracy, in which we allow for extra number of columns, differing column names and differing row and column order. Just for reference, the Execution Accuracy used in BIRD compares rows, irrespective of row order or repeating rows. As a baseline, we tested the performance of GPT4 and Anthropic's Claude-3.
 
-## Sample Question-Answer Pair Generation
+## Updates
 
-- Generate Answers with our Questions from 3 Azure AI models (3.5, 4, …)
+Sign-up for updated [on Twitter](https://x.com/llmsql)
 
-## Live Execution & Testing
-
-- How to test this on the fly?
-- Deployment to Streamlit
+# Methodology
 
 ## Categories of questions:
 
