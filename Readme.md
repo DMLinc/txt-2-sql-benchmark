@@ -13,7 +13,7 @@ This SQL Benchmark consists of ~200 Question/Query samples run against a databas
 
 ## Updates
 
-Sign-up for updated [on Twitter](https://x.com/llmsql)
+Sign-up for updates [on Twitter](https://x.com/llmsql)
 
 # Methodology
 
