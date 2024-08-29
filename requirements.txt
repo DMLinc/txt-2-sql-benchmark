@@ -1,0 +1,8 @@
+snowflake-connector-python==3.7.1
+snowflake-snowpark-python==1.14.0
+snowflake-sqlalchemy==1.5.1
+SQLAlchemy==1.4.52
+streamlit==1.28.0
+tqdm==4.66.2
+numpy==1.25.2
+pandas==2.1.0
